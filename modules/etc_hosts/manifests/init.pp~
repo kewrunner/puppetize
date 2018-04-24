@@ -1,0 +1,8 @@
+class etc_hosts {
+  file { "/etc/hosts":
+    owner => root,
+    group => root,
+    mode => 775,
+    source => "puppet:///etc_hosts/etc_hosts"
+  }
+}

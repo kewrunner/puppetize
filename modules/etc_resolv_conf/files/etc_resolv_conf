@@ -1,0 +1,9 @@
+######################################################################
+#                                                                    #
+# This file is managed by puppet. Any changes to this file will be   #
+# overwritten on the next puppet run.                                #
+#                                                                    #
+######################################################################
+
+nameserver 10.1.0.3
+nameserver 4.2.2.2

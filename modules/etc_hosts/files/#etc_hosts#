@@ -1,0 +1,68 @@
+######################################################################
+#                                                                    #
+# This file is managed by puppet. Any changes to this file will be   #
+# overwritten on the next puppet run.                                #
+#                                                                    #
+######################################################################
+
+127.0.0.1   localhost
+::1         localhost
+
+#Kickstart Server / Puppet Master
+10.1.0.143 	HSVKICKSTART
+10.1.0.143 	puppet
+
+#Edge Nodes
+10.1.1.121  	HSVHEDGED.quaero.com	HSVHEDGED
+10.1.1.35	HSVHNBCE01P.quaero.com	HSVHNBCE01P
+
+#Name Nodes
+10.1.1.103  	HSPHNAME01D.quaero.com	HSPHNAME01D
+10.1.1.113  	HSPHNAME02D.quaero.com	HSPHNAME02D
+10.1.1.49	HSPHCM01P.quaero.com	HSPHCM01P
+10.1.1.38	HSPHNBCN01P.quaero.com	HSPHNBCN01P
+10.1.1.52	HSPHNBCN02P.quaero.com	HSPHNBCN02P
+
+#Data Nodes
+10.1.1.16       HSPHNBCD11P.quaero.com HSPHNBCD11P
+10.1.1.19       HSPHNBCD12P.quaero.com HSPHNBCD12P
+10.1.1.26       HSPHNBCD13P.quaero.com HSPHNBCD13P
+10.1.1.13   	HSPHDATA01D.quaero.com	HSPHDATA01D
+10.1.1.23   	HSPHDATA02D.quaero.com	HSPHDATA02D
+10.1.1.33   	HSPHDATA03D.quaero.com	HSPHDATA03D
+10.1.1.43   	HSPHDATA04D.quaero.com	HSPHDATA04D
+10.1.1.53   	HSPHDATA05D.quaero.com	HSPHDATA05D
+10.1.1.63   	HSPHDATA06D.quaero.com	HSPHDATA06D
+10.1.1.73   	HSPHDATA07D.quaero.com	HSPHDATA07D
+10.1.1.83   	HSPHDATA08D.quaero.com	HSPHDATA08D
+10.1.1.29   	HSPHNBCD14P.quaero.com HSPHNBCD14P
+10.1.1.37   	HSPHNBCD15P.quaero.com HSPHNBCD15P
+10.1.1.40   	HSPHNBCD16P.quaero.com HSPHNBCD16P
+10.1.1.45   	HSPHNBCD17P.quaero.com HSPHNBCD17P
+10.1.1.48   	HSPHNBCD10P.quaero.com	HSPHNBCD10P
+10.1.1.51   	HSPHNBCD09P.quaero.com	HSPHNBCD09P
+10.1.1.56   	HSPHNBCD08P.quaero.com	HSPHNBCD08P
+10.1.1.59   	HSPHNBCD07P.quaero.com	HSPHNBCD07P
+10.1.1.60	HSPHNBCD01P.quaero.com	HSPHNBCD01P
+10.1.1.68	HSPHNBCD02P.quaero.com	HSPHNBCD02P
+10.1.1.70	HSPHNBCD03P.quaero.com	HSPHNBCD03P
+10.1.1.72	HSPHNBCD04P.quaero.com	HSPHNBCD04P
+10.1.1.76	HSPHNBCD05P.quaero.com	HSPHNBCD05P
+10.1.1.78	HSPHNBCD06P.quaero.com	HSPHNBCD06P
+
+
+##### Test Puppet stuff ########################
+
+
+10.1.0.244 HSVLINUXTEST01
+10.1.0.200 HSVLINUXTEST02
+#10.1.0.244 puppet
+
+##### NTP Servers ##############################
+
+72.14.188.52	pool.ntp.org
+4.53.160.75	0.rhel.pool.ntp.org
+69.164.217.193	1.rhel.pool.ntp.org
+
+
+

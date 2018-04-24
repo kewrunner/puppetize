@@ -1,0 +1,17 @@
+class ntp {
+  
+  file { "/etc/ntp.conf":
+    owner => root,
+    group => root,
+    mode => 644,
+    source => "puppet:///ntp/etc_ntp.conf"
+  }
+  package { "ntp":
+    ensure => latest
+  }
+  service { "ntp":
+    ensure => running,
+    enable => true,
+    subscribe  => [ Package["ntp"], File["/etc/ntp.conf"] ],
+  }
+}        

@@ -1,0 +1,92 @@
+class data_node_disks {
+
+  #If there is no filesystem or the filesystem is not ext3,
+  #puppet will format the drives
+  
+  exec { "format_sdb":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sdb ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sdb",
+  }
+  exec { "format_sdc":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sdc ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sdc",
+  }
+  exec { "format_sdd":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sdd ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sdd",
+  }
+  exec { "format_sde":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sde ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sde",
+  }
+  exec { "format_sdf":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sdf ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sdf",
+  }
+  exec { "format_sdg":
+    command => "/usr/bin/yes | /sbin/mkfs.ext3 /dev/sdg ; /bin/mount -a",
+    unless => "/bin/mount | /bin/grep -q sdg",
+  }
+
+  #Here is where the mounts get added to /etc/fstab
+  
+  mount { "/mnt/DATA1":
+    atboot  => true,
+    device  => "/dev/sdb",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+  
+  mount { "/mnt/DATA2":
+    atboot  => true,
+    device  => "/dev/sdc",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+  
+  mount { "/mnt/DATA3":
+    atboot  => true,
+    device  => "/dev/sdd",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+
+  mount { "/mnt/DATA4":
+    atboot  => true,
+    device  => "/dev/sde",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+  
+  mount { "/mnt/DATA5":
+    atboot  => true,
+    device  => "/dev/sdf",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+  
+  mount { "/mnt/DATA6":
+    atboot  => true,
+    device  => "/dev/sdg",
+    ensure  => mounted,
+    fstype  => "ext3",
+    options => "defaults",
+    dump    => "0",
+    pass    => "0",
+  }
+}          

@@ -1,0 +1,34 @@
+######################################################################
+#                                                                    #
+# This file is managed by puppet. Any changes to this file will be   #
+# overwritten on the next puppet run.                                #
+#                                                                    #
+######################################################################
+
+# -i for confirmation, interactive, use -f to go around this or in scripting
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+
+#User's prompts are in CYAN
+export PS1='\[\e[0;36m\]\u@\h:\w#\[\e[0m\] '
+
+alias ls='ls -F --color=none'
+
+
+#Save history correctly when using multiple terminals
+# Dont save duplicate lines or blank lines in to history
+export HISTCONTROL=ignoreboth
+export HISTSIZE=5000
+
+
+#This lists all of the IPs for the Hadoop hosts
+alias listnodes='cat /etc/hosts | grep HS | cut -f1 -d " "'
+
