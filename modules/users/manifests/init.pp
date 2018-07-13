@@ -1,11 +1,11 @@
-import "paul"
-import "root"
+import "peter"
+import "tim"
 import "fgonzal"
 
 class users {
 
   include users::root
-  include users::paul
+  include users::peter
   include users::fgonzal
   
 }
